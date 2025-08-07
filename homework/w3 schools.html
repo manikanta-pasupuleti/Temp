@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3Schools Authentication Demo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #000;
+            line-height: 1.5;
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            background-image: url('https://www.transparenttextures.com/patterns/white-paper.png');
+        }
+
+        header {
+            background-color: #282A35;
+            padding: 16px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 100px 0;
+        }
+
+        .intro {
+            margin-right: 60px;
+            max-width: 500px;
+        }
+
+        .intro h1 {
+            color: #04AA6D;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .auth-forms {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            width: 400px;
+            max-width: 100%;
+        }
+
+        .form-container {
+            transition: all 0.3s ease;
+        }
+
+        .login-form {
+            display: block;
+        }
+
+        .register-form {
+            display: none;
+        }
+
+        .form-title {
+            color: #1c1e21;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        input {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            padding: 12px 15px;
+            width: 100%;
+            background-color: #f8f8f8;
+        }
+
+        input:focus {
+            border-color: #1877f2;
+            box-shadow: 0 0 0 2px #e7f3ff;
+            outline: none;
+        }
+
+        .login-btn {
+            background-color: #04AA6D;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px 16px;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #038352;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .divider {
+            align-items: center;
+            border-bottom: 1px solid #dadde1;
+            display: flex;
+            margin: 20px 0;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .social-login button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48%; /* Adjust width for square buttons */
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+            height: 50px; /* Fixed height for square buttons */
+        }
+
+        .social-login button:hover {
+            background: #f5f5f5;
+        }
+
+        .social-login button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .feide-btn {
+            color: #0072C6; /* Feide color */
+            border-color: #0072C6 !important;
+        }
+
+        footer {
+            background-color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                padding-top: 40px;
+            }
+
+            .intro {
+                margin: 0 0 40px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/67b13177-c551-4084-ad19-40ac7a1d6250.png" alt="W3Schools logo" />
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h1>Welcome to W3Schools</h1>
+            <p>The world's largest web developer site.</p>
+        </div>
+
+        <div class="auth-forms">
+            <div class="form-container">
+                <div class="login-form">
+                    <h2 class="form-title">W3Schools Member Login</h2>
+                    
+                    <div class="social-login">
+                        <button class="feide-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Feide_logo.svg/1200px-Feide_logo.svg.png" alt="Feide logo">
+                            Feide
+                        </button>
+                        <button class="google-btn">
+                            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo">
+                            Google
+                        </button>
+                    </div>
+                    <div class="social-login">
+                        <button class="github-btn">
+                            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub logo">
+                            GitHub
+                        </button>
+                        <button class="linkedin-btn">
+                            <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn logo">
+                            LinkedIn
+                        </button>
+                    </div>
+                    <div class="divider">OR</div>
+                    <form id="login">
+                        <div class="form-group">
+                            <input type="text" placeholder="Email or phone number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        
+                        <button type="submit" class="login-btn">Log In</button>
+                        
+                        <div class="form-group">
+                            <button type="button" class="auth-toggle" onclick="toggleForms()">Create New Account</button>
+                        </div>
+                        
+                        <div class="divider"></div>
+                        
+                        <div class="form-group">
+                            <button type="button" class="auth-toggle">Forgot Password?</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="register-form">
+                    <h2 class="form-title">Create Account</h2>
+                    <p class="form-subtitle">Start your coding journey today!</p>
+                    
+                    <form id="register">
+                        <div class="form-group name-fields">
+                            <input type="text" placeholder="First name" required>
+                            <input type="text" placeholder="Last name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" placeholder="Mobile number or email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="password" placeholder="New password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="date" required>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <p>By clicking Sign Up, you agree to our Terms, Data Policy and Cookies Policy.</p>
+                        </div>
+                        
+                        <center>
+                            <button type="submit" class="register-btn">Sign Up</button>
+                            <div class="form-group">
+                                <button type="button" class="auth-toggle" onclick="toggleForms()">Already have an account?</button>
+                            </div>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 W3Schools Demo</p>
+    </footer>
+
+    <script>
+        function toggleForms() {
+            const loginForm = document.querySelector('.login-form');
+            const registerForm = document.querySelector('.register-form');
+            
+            if (loginForm.style.display === 'block') {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+            } else {
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+            }
+        }
+
+        document.getElementById('login').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login functionality would be implemented here');
+        });
+        
+        // Social login handlers
+        document.querySelector('.feide-btn').addEventListener('click', function() {
+            alert('Feide login would be implemented here');
+        });
+        
+        document.querySelector('.google-btn').addEventListener('click', function() {
+            alert('Google login would be implemented here');
+        });
+        
+        document.querySelector('.github-btn').addEventListener('click', function() {
+            alert('GitHub login would be implemented here');
+        });
+        
+        document.querySelector('.linkedin-btn').addEventListener('click', function() {
+            alert('LinkedIn login would be implemented here');
+        });
+
+        document.getElementById('register').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Registration functionality would be implemented here');
+        });
+    </script>
+</body>
+</html>

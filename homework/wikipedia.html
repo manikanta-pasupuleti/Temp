@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML - Wikipedia Clone</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    nav {
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #0645ad;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    pre {
+      background: #f0f0f0;
+      padding: 10px;
+      overflow-x: auto;
+      border-left: 3px solid #ccc;
+    }
+
+    /* Tooltip-style box using details/summary */
+    details.popup {
+      display: inline-block;
+      position: relative;
+    }
+
+    details.popup summary {
+      list-style: none;
+      cursor: pointer;
+      display: inline;
+      color: #0645ad;
+      text-decoration: underline;
+    }
+
+    details.popup[open] > div {
+      position: absolute;
+      z-index: 1;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    details.popup .cern-image {
+      width: 100%;
+      height: auto;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HTML</h1>
+    <p><i>From Wikipedia, the free encyclopedia</i></p>
+  </header>
+
+  <nav>
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#history">History</a></li>
+      <li><a href="#markup">Markup</a></li>
+      <li><a href="#example">Example Code</a></li>
+    </ol>
+  </nav>
+  
+  <main>
+    <section id="intro">
+      <h2>Introduction</h2>
+      <p><b>HTML</b> (HyperText Markup Language) is the standard markup language for creating web pages and web applications. It describes the structure of a web page semantically and originally included cues for the appearance of the document.</p>
+    </section>
+
+    <section id="history">
+      <h2>History</h2>
+      <p>In 1980, <a href="#">physicist Tim Berners-Lee</a>, a contractor at 
+        <details class="popup">
+          <summary>CERN</summary>
+          <div>
+            <p><b>European Organization for Nuclear Research</b>, known as <b>CERN</b>, is an intergovernmental organization that operates the largest particle physics lab in the world. Established in 1954, it is based in Geneva, Switzerland.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/CERN_logo.svg" alt="CERN Logo" class="cern-image">
+          </div>
+        </details>, proposed a system for sharing documents over the internet.
+      </p>
+
+      <p>He later wrote the first web browser and server, launching the World Wide Web project at CERN. This became the basis for modern web technology.<sup>
+        <details class="popup">
+          <summary>[5]</summary>
+          <div>
+            <p>Berners-Lee, Tim. <a href="https://www.w3.org/History/1989/proposal.html" target="_blank">"Intended Uses"</a>. <i>W3C</i>.</p>
+          </div>
+        </details>
+      </sup></p>
+    </section>
+
+    <section id="markup">
+      <h2>Markup</h2>
+      <p>HTML uses various tags to define elements like <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;div&gt;</code>, etc. These tags are used to structure the content of the page.</p>
+    </section>
+
+    <section id="example">
+      <h2>Example Code</h2>
+      <p>Below is a basic example of an HTML document:</p>
+      <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;This is a title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;p&gt;Hello world!&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+    </section>
+  </main>
+
+  <footer>
+   
+  </footer>
+
+</body>
+</html>

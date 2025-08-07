@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IRCTC Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 25px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .captcha-box {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .captcha-text {
+      background: #e0e0e0;
+      padding: 10px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 16px;
+    }
+
+    .refresh {
+      font-size: 14px;
+      color: #0073e6;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #00529b;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      margin-top: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .links a {
+      display: block;
+      color: #0073e6;
+      text-decoration: none;
+      margin: 4px 0;
+    }
+
+    /* Tooltip-style info using details tag */
+    details.popup {
+      display: inline-block;
+      position: relative;
+    }
+
+    details.popup summary {
+      list-style: none;
+      display: inline;
+      cursor: pointer;
+      color: #0073e6;
+      text-decoration: underline;
+    }
+
+    details.popup[open] > div {
+      position: absolute;
+      top: 25px;
+      left: 0;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 250px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>IRCTC Login</h2>
+
+    <label for="username">User Name</label>
+    <input type="text" id="username" placeholder="Enter username">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter password">
+
+    <div class="captcha-box">
+      <div class="captcha-text">X7K3P</div>
+      <span class="refresh">Refresh CAPTCHA</span>
+    </div>
+
+    <label for="captcha">Enter CAPTCHA</label>
+    <input type="text" id="captcha" placeholder="Type the characters above">
+
+    <button>Login</button>
+
+    <div class="links">
+      <a href="#">Sign Up</a>
+      <a href="#">Forgot Password?</a>
+      <a href="#">Agent Login</a>
+      <details class="popup">
+        <summary>Need Help?</summary>
+        <div>
+          <p><b>Username:</b> Must be 3-35 characters long.</p>
+          <p><b>Password:</b> Minimum 8 characters with letters and numbers.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+
+</body>
+</html>

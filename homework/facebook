@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Log in or Sign Up</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #1c1e21;
+            line-height: 1.34;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+            height: 56px;
+            padding: 0 16px;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 100px 0;
+        }
+
+        .intro {
+            margin-right: 60px;
+            max-width: 500px;
+        }
+
+        .intro h1 {
+            color: #1877f2;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .intro img {
+            width: 500px;
+            margin-top: -40px;
+            position: relative;
+            top: 50px;
+        }
+
+        .auth-forms {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 396px;
+        }
+
+        .form-container {
+            transition: all 0.3s ease;
+        }
+
+        .login-form {
+            display: block;
+        }
+
+        .register-form {
+            display: none;
+        }
+
+        .form-title {
+            color: #1c1e21;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        input {
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 17px;
+            padding: 14px 16px;
+            width: 100%;
+        }
+
+        input:focus {
+            border-color: #1877f2;
+            box-shadow: 0 0 0 2px #e7f3ff;
+            outline: none;
+        }
+
+        .login-btn {
+            background-color: #1877f2;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px;
+            width: 100%;
+        }
+
+        .login-btn:hover {
+            background-color: #166fe5;
+        }
+
+        .register-btn {
+            background-color: #42b72a;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 12px;
+            width: 60%;
+        }
+
+        .register-btn:hover {
+            background-color: #36a420;
+        }
+
+        .divider {
+            align-items: center;
+            border-bottom: 1px solid #dadde1;
+            display: flex;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .auth-toggle {
+            background: none;
+            border: none;
+            color: #1877f2;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 15px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .auth-toggle:hover {
+            text-decoration: underline;
+        }
+
+        .name-fields {
+            display: flex;
+            gap: 10px;
+        }
+
+        .form-footer {
+            border-top: 1px solid #dddfe2;
+            font-size: 14px;
+            margin-top: 20px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                padding-top: 40px;
+            }
+
+            .intro {
+                margin: 0 0 40px;
+                text-align: center;
+            }
+
+            .intro img {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a558f95a-4419-4ab7-aac3-405e170d8c3d.png" alt="Facebook logo in blue with white text" />
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h1>Connect with friends and the world around you on Facebook.</h1>
+            <p>See photos and updates from friends in News Feed. Share what's new in your life on your Timeline. Find more of what you're looking for with Facebook Search.</p>
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/39dd5e71-3b4e-4912-a3b7-738e5d5b96e3.png" alt="Illustration showing people connecting through social media with speech bubbles and profile icons" />
+        </div>
+
+        <div class="auth-forms">
+            <div class="form-container">
+                <div class="login-form">
+                    <h2 class="form-title">Log in to Facebook</h2>
+                    
+                    <form id="login">
+                        <div class="form-group">
+                            <input type="text" placeholder="Email or phone number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        
+                        <button type="submit" class="login-btn">Log In</button>
+                        
+                        <div class="form-group">
+                            <button type="button" class="auth-toggle" onclick="toggleForms()">Create New Account</button>
+                        </div>
+                        
+                        <div class="divider"></div>
+                        
+                        <div class="form-group">
+                            <button type="button" class="auth-toggle">Forgot Password?</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="register-form">
+                    <h2 class="form-title">Sign Up</h2>
+                    <p class="form-subtitle">It's quick and easy.</p>
+                    
+                    <form id="register">
+                        <div class="form-group name-fields">
+                            <input type="text" placeholder="First name" required>
+                            <input type="text" placeholder="Last name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" placeholder="Mobile number or email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="password" placeholder="New password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div style="display: flex; gap: 10px;">
+                                <label><input type="radio" name="gender" required> Female</label>
+                                <label><input type="radio" name="gender"> Male</label>
+                                <label><input type="radio" name="gender"> Custom</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <p>By clicking Sign Up, you agree to our Terms, Data Policy and Cookies Policy.</p>
+                        </div>
+                        
+                        <center>
+                            <button type="submit" class="register-btn">Sign Up</button>
+                            <div class="form-group">
+                                <button type="button" class="auth-toggle" onclick="toggleForms()">Already have an account?</button>
+                            </div>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 Facebook</p>
+    </footer>
+
+    <script>
+        function toggleForms() {
+            const loginForm = document.querySelector('.login-form');
+            const registerForm = document.querySelector('.register-form');
+            
+            if (loginForm.style.display === 'block') {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+            } else {
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+            }
+        }
+
+        document.getElementById('login').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login functionality would be implemented here');
+        });
+
+        document.getElementById('register').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Registration functionality would be implemented here');
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manikanta.p - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple print-friendly styles */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .resume-container {
+                box-shadow: none;
+                margin: 0;
+                max-width: 100%;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Main Resume Container -->
+    <div class="resume-container container mx-auto my-8 max-w-4xl rounded-lg bg-white p-6 shadow-2xl">
+
+        <!-- Header Section -->
+        <header class="text-center mb-6">
+            <h1 class="text-3xl font-bold text-gray-900">[Your Name]</h1>
+            <div class="mt-2 text-xs font-medium text-gray-500 flex justify-center items-center flex-wrap gap-x-3 gap-y-1">
+                <span>[Your Phone Number]</span>
+                <span class="text-gray-300">|</span>
+                <a href="mailto:[Your Email Address]" class="text-blue-600 hover:underline">[Your Email Address]</a>
+                <span class="text-gray-300">|</span>
+                <a href="[Your LinkedIn Profile URL]" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a>
+                <span class="text-gray-300">|</span>
+                <a href="[Your GitHub/Portfolio URL]" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
+            </div>
+        </header>
+
+        <!-- Education Section -->
+        <section class="mb-4">
+            <h2 class="text-lg font-bold border-b-2 border-gray-200 pb-1 mb-2 text-gray-900">EDUCATION</h2>
+            <div>
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-base font-semibold text-gray-800">[Name of Your College/University]</h3>
+                    <span class="text-xs font-medium text-gray-500">[City, State]</span>
+                </div>
+                <div class="flex justify-between items-baseline italic text-sm">
+                    <p class="text-gray-700">B.Tech in [Your Branch]</p>
+                    <p class="text-xs text-gray-600">Expected: [Month, Year]</p>
+                </div>
+                <p class="text-xs text-gray-600">CGPA: [Your CGPA]/10.0</p>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section class="mb-4">
+            <h2 class="text-lg font-bold border-b-2 border-gray-200 pb-1 mb-2 text-gray-900">TECHNICAL SKILLS</h2>
+            <div class="text-sm space-y-1">
+                <p><span class="font-semibold">Languages:</span> [e.g., Python, Java, C++, JavaScript]</p>
+                <p><span class="font-semibold">Web Tech:</span> [e.g., HTML, CSS, React.js, Node.js, Django]</p>
+                <p><span class="font-semibold">Databases & Tools:</span> [e.g., MySQL, MongoDB, Git, Docker]</p>
+                <p><span class="font-semibold">Core Subjects:</span> [e.g., Data Structures, Algorithms, OOP, OS, DBMS]</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="mb-4">
+            <h2 class="text-lg font-bold border-b-2 border-gray-200 pb-1 mb-2 text-gray-900">PROJECTS</h2>
+            <div class="space-y-3">
+                <!-- Project 1 -->
+                <div class="text-sm">
+                    <h3 class="text-base font-semibold text-gray-800">[Project Title 1] | <a href="[Link]" target="_blank" class="text-blue-600 hover:underline">Link</a></h3>
+                    <p class="text-xs italic text-gray-600">Tech Stack: [e.g., Python, Flask, SQLite]</p>
+                    <ul class="list-disc list-inside text-gray-700 text-xs mt-1">
+                        <li>Developed a [brief, one-line description of the project].</li>
+                        <li>Implemented [mention a key feature or algorithm].</li>
+                    </ul>
+                </div>
+                <!-- Project 2 -->
+                <div class="text-sm">
+                    <h3 class="text-base font-semibold text-gray-800">[Project Title 2] | <a href="[Link]" target="_blank" class="text-blue-600 hover:underline">Link</a></h3>
+                    <p class="text-xs italic text-gray-600">Tech Stack: [e.g., Java, Spring Boot, MySQL]</p>
+                    <ul class="list-disc list-inside text-gray-700 text-xs mt-1">
+                        <li>Created a [brief, one-line description of the project].</li>
+                        <li>Designed and implemented a RESTful API for [mention the purpose].</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="mb-4">
+            <h2 class="text-lg font-bold border-b-2 border-gray-200 pb-1 mb-2 text-gray-900">EXPERIENCE</h2>
+            <div class="text-sm">
+                <div class="flex justify-between items-baseline">
+                    <h3 class="text-base font-semibold text-gray-800">[Company Name]</h3>
+                    <span class="text-xs font-medium text-gray-500">[Start Date] – [End Date]</span>
+                </div>
+                <p class="italic text-gray-700 text-xs">[Your Role, e.g., SDE Intern] | [City, State]</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 text-xs mt-1">
+                    <li>Contributed to [mention a specific feature] using [mention technologies].</li>
+                    <li>Assisted in debugging and resolving over 20 software defects.</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2 class="text-lg font-bold border-b-2 border-gray-200 pb-1 mb-2 text-gray-900">ACHIEVEMENTS</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+                <li>Achieved global rank of [Your Rank] in [Coding Competition, e.g., Google Code Jam].</li>
+                <li>Secured 1st place in [Event Name], a project competition held at [College Name].</li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+</html>
